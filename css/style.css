@@ -41,7 +41,9 @@ a {
     color: #ffffff;
 }
 .container {
-     width: 1200px;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .clearfix::after {
     content: "";
