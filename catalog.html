@@ -8,8 +8,8 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
     <body>
-        <div class="centering">
-            <div class="wrapper">
+        <div class="site-wrapper">
+            <div class="content-wrapper">
                 <header class="main-header clearfix">
                         <img class="primary-logo" src="img/logo.svg" width="155" height="65" alt="Glassy Shop">
                         <nav class="primary-menu">
@@ -48,6 +48,31 @@
                             </div><!--
                         --><div class="header-top crate catalog-crate">
                                 <div class="crate-modal">2 товара</div>
+                                <div class="crate-no-visible">
+                                    <div class="crate-popup clearfix">
+                                        <table>
+                                            <tr>
+                                                <td>&#215;</td>
+                                                <td class="table-image1"></td>
+                                                <td>Пломбир с апельсиновым джемом</td>
+                                                <td>1,5кгx<span>200руб.</span></td>
+                                                <td>300 руб.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>&#215;</td>
+                                                <td class="table-image2"></td>
+                                                <td>Клубничный пломбир с присыпкой из белого шоколада</td>
+                                                <td>1,5кгx<span>300руб.</span></td>
+                                                <td>450 руб.</td>
+                                            </tr>
+                                        </table>
+                                        <div class="stripe"></div>
+                                        <div class="crate-popup-right">
+                                            <p>Итого: 750руб.</p>
+                                            <button class="btn" type="submit">Оформить заказ</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                 </header>
@@ -66,29 +91,57 @@
                     <form action="#" method="get" class="choice-product">
                         <div class="catalog-select catalog-sort">
                             <p>Сортировка:</p>
-                            <div class="catalog-select-item">по популярности<div class="sort-triangle"></div></div>
+                            <div class="catalog-select-item catalog-sort-item">по популярности<div class="sort-triangle"></div></div>
                         </div>
-                        <div class="catalog-select catalog-price">
+                        <div class="catalog-select">
                             <p>Цена: 100руб. - 500руб.</p>
+                            <div class="price-line"></div>
                             <div class="catalog-select-item catalog-price"></div>
                         </div>
                         <div class="catalog-select catalog-fatness">
                         <p>Жирность:</p>
                             <div class="catalog-select-item">
-                                <label><input type="radio" name="fatness" value="0%">0%</label>
-                                <label><input type="radio" name="fatness" value="до 10%" checked>до 10%</label>
-                                <label><input type="radio" name="fatness" value="До 30%">до 30%</label>
-                                <label><input type="radio" name="fatness" value="выше 30%">выше 30%</label>
+                                <label>
+                                    <input type="radio" name="fatness" value="0%">0%
+                                    <span class="fatness-indicator"></span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="fatness" value="до 10%" checked>до 10%
+                                    <span class="fatness-indicator"></span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="fatness" value="До 30%">до 30%
+                                    <span class="fatness-indicator"></span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="fatness" value="выше 30%">выше 30%
+                                    <span class="fatness-indicator"></span>
+                                </label>
                             </div>
                         </div>
                         <div class="catalog-select catalog-fill">
                             <p>Наполнители</p>
                             <div class="catalog-select-item">
-                            <label><input type="checkbox" name="chokolate" checked>шоколадные</label>
-                            <label><input type="checkbox" name="sugar" checked>сахарные присыпки</label>
-                            <label><input type="checkbox" name="fruit">фрукты</label>
-                            <label><input type="checkbox" name="syrups">сиропы</label>
-                            <label><input type="checkbox" name="jams">джемы</label>
+                            <label>
+                                <input type="checkbox" name="chokolate" checked>шоколадные
+                                <span class="checkbox-indicator"></span>
+                            </label>
+                            <label>
+                                <input type="checkbox" name="sugar" checked>сахарные присыпки
+                                <span class="checkbox-indicator"></span>
+                            </label>
+                            <label>
+                                <input type="checkbox" name="fruit">фрукты
+                                <span class="checkbox-indicator"></span>
+                            </label>
+                            <label>
+                                <input type="checkbox" name="syrups">сиропы
+                                <span class="checkbox-indicator"></span>
+                            </label>
+                            <label>
+                                <input type="checkbox" name="jams">джемы
+                                <span class="checkbox-indicator"></span>
+                            </label>
                             </div>
                             <button class="catalog-select-item" type="submit">Применить</button>
                         </div>
@@ -236,16 +289,20 @@
                         </div>
                     </section>
                     <div class="clearfix"></div>
-                    <div class="list">
-                        <a href="#">1</a>
-                        <a href="#">2</a>
-                        <a href="#">3</a>
-                        <a href="#">4</a>
-                        <a href="#">5</a>
+                    <div class="page-list clearfix">
+                        <ul class="catalog-list">
+                            <li><a href="#"></a></li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#"></a></li>
+                        </ul>
                     </div>
                 </main>
             </div>
-        <footer>
+        <footer class="catalog-footer">
              <section class="footer-bottom">
                         <ul class="social">
                             <li class="social-icons twitter">
