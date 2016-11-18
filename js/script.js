@@ -1,4 +1,4 @@
-var link = document.querySelector(".feedback-btn");
+            var link = document.querySelector(".feedback-btn");
             var popup = document.querySelector(".feedback");
             var close = document.querySelector(".feedback-close");
             var login = popup.querySelector("[name=name]");

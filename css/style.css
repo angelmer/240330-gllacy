@@ -42,11 +42,11 @@ a:active {
     color: rgba(255, 188, 158, 1);
 }
 input[type="text"]:hover {
-    border: 2px solid #c7c6c5; 
+    border: 1px solid #c7c6c5; 
 }
 input[type="text"]:focus {
     position: relative;
-    border: 2px solid #8fbdec;
+    border: 1px solid #8fbdec;
 }
 .site-wrapper {
     width: 1200px;
@@ -191,7 +191,7 @@ input[type="text"]:focus {
     position: absolute;
     top: 10px;
     padding-top: 30px;
-    left: -180px;
+    left: -350px;
 }
 .search-modal div {
     padding: 10px;
@@ -199,25 +199,37 @@ input[type="text"]:focus {
     background-color: white;
 }
 .search-modal input {
-    padding: 5px;
+    width: 340px;
+    padding: 10px;
     margin: 5px;
+    margin-top: 10px;
     border-radius: 3px;
+}
+.search-modal label {
+    position: absolute;
+    color: #cccccc;
+    left: 25px;
+    top: 60px;
+}
+.search-modal input:focus~label {
+    top: 30px;
+    left: 20px;
 }
 .search-icon {
     width: 33px;
     height: 33px;
-    background-image: url(../img/icon/loupe.png);
+    background-image: url(../img/icon/sprites.png);
     background-repeat: no-repeat;
-    background-position: 9px 8px;
+    background-position: -528px 5px;
 }
 .search-icon:hover {
     width: 33px;
     min-height: 33px;
     border-radius: 50%;
     background-color: white;
-    background-image: url(../img/icon/loupeBlack.png);
+    background-image: url(../img/icon/sprites.png);
     background-repeat: no-repeat;
-    background-position: 9px 8px;
+    background-position: -594px 5px;
 }
 .login {
     position: relative;
@@ -226,16 +238,16 @@ input[type="text"]:focus {
     padding-left: 45px;
     padding-right: 15px;
     border-radius: 33px;
-    background-image: url(../img/icon/enter.png);
+    background-image: url(../img/icon/sprites.png);
     background-repeat: no-repeat;
-    background-position: 15px 5px;
+    background-position: -262px 5px;
 }
 .login:hover {
     color: black;
     background-color: white;
-    background-image: url(../img/icon/enterBlack.png);
+    background-image: url(../img/icon/sprites.png);
     background-repeat: no-repeat;
-    background-position: 15px 5px;
+    background-position: -391px 3px;
 }
 .login:hover .login-modal {
     display: block;
@@ -246,8 +258,9 @@ input[type="text"]:focus {
     top: 0px;
     padding-top: 35px;
     left: -195px;
+    z-index: 1;
 }
-.login-modal div {
+.login-modal-item {
     width: 275px;
     height: 150px;
     background-color: white;
@@ -260,9 +273,22 @@ input[type="text"]:focus {
     width: 240px;
     padding: 5px;
     padding-left: 10px;
-    margin-top: 15px;
+    margin-top: 20px;
     margin-bottom: 10px;
     border-radius: 3px;
+}
+.login-modal-item div {
+    position: relative;
+}
+.login-modal label {
+    position: absolute;
+    color: #cccccc;
+    left: 10px;
+    top: 25px;
+}
+.login-modal input:focus~label {
+    top: 5px;
+    left: 5px;
 }
 .login-modal a {
     padding-left: 20px;
@@ -270,6 +296,7 @@ input[type="text"]:focus {
 }
 .login-modal button {
     float: left;
+    padding: 5px;
     padding-left: 15px;
     padding-right: 15px;
     border: none;
@@ -281,9 +308,9 @@ input[type="text"]:focus {
     padding-left: 43px;
     padding-right: 35px;
     border-radius: 30px;
-    background-image: url(../img/icon/crate.png);
+    background-image: url(../img/icon/sprites.png);
     background-repeat: no-repeat;
-    background-position: 15px 5px;
+    background-position: 13px 2px;
 }
 
 /* main */
@@ -445,7 +472,8 @@ input[type="text"]:focus {
     position: absolute;
     width: 61px;
     height: 61px;
-    background-image: url(../img/icon/hit.png);
+    background-image: url(../img/icon/sprites.png);
+    background-position: -578px -50px;
 }
 .product p {
     width: 250px;
@@ -507,16 +535,20 @@ input[type="text"]:focus {
     height: 49px;
 }
 .product-icon-icecream {
-    background-image: url(../img/icon/icecream.png);
+    background-image: url(../img/icon/sprites.png);
+    background-position: -100px -50px;
 }
 .product-icon-leaf {
-    background-image: url(../img/icon/leaf.png);
+    background-image: url(../img/icon/sprites.png);
+    background-position: -201px -51px;
 }
 .product-icon-cow {
-    background-image: url(../img/icon/cow.png);
+    background-image: url(../img/icon/sprites.png);
+    background-position: -1px -49px;
 }
 .product-icon-thermometer {
-    background-image: url(../img/icon/thermometer.png);
+    background-image: url(../img/icon/sprites.png);
+    background-position: -300px -50px;
 }
 .information {
     margin-bottom: 29px;
@@ -559,6 +591,7 @@ input[type="text"]:focus {
     margin-bottom: 5px;
 }
 .subscribe {
+    position: relative;
     margin-left: 2.2%;
     background-image: url(../img/post.png);
     background-repeat: no-repeat;
@@ -573,6 +606,22 @@ input[type="text"]:focus {
     min-height: 40px;
     margin-left: 20px;
     border-radius: 5px;
+}
+.subscribe label {
+    position: absolute;
+    color: #cccccc;
+    left: 40px;
+    top: 145px;
+}
+.subscribe input:focus {
+    border: 1px solid #8fbdec; 
+}
+.subscribe input:hover {
+    border: 1px solid #c7c6c5;
+}
+.subscribe input:focus~label {
+    top: 110px;
+    left: 25px;
 }
 .subscribe button {
     margin-left: 10px;
@@ -620,6 +669,14 @@ input[type="text"]:focus {
 }
 .feedback-input {
     position: relative;
+}
+.feedback-input input:focus~label {
+    top: -20px;
+    left: 0px;
+}
+.feedback-input textarea:focus~label {
+    top: -20px;
+    left: 0px;
 }
 .feedback-open {
     margin-top: 20px;
@@ -764,7 +821,8 @@ input[type="text"]:focus {
     height: 139px;
     top: 139px;
     left: 266px;
-    background-image: url(../img/icon/pin.png);
+    background-image: url(../img/icon/sprites.png);
+    background-position: -415px -120px;
     background-repeat: no-repeat;
 }
 .footer-bottom {
@@ -788,34 +846,41 @@ input[type="text"]:focus {
     border-radius: 50%;
     background-color: #849d8f;
     background-repeat: no-repeat;
-    background-position: -1px -1px;
 }
 .social-icons:active {
     box-shadow: inset 0px 1px 1px 0 black;
 }
 .twitter {
-    background-image: url(../img/icon/twitter.png);
+    background-image: url(../img/icon/sprites.png);
+    background-position: -216px -117px;
 }
 .twitter:hover {
-    background-image: url(../img/icon/twitterwhite.png);
+    background-image: url(../img/icon/sprites.png);
+    background-position: -267px -119px;
 }
 .instagram {
-    background-image: url(../img/icon/instagram.png);
+    background-image: url(../img/icon/sprites.png);
+    background-position: -116px -117px;
 }
 .instagram:hover {
-    background-image: url(../img/icon/instawhite.png);
+    background-image: url(../img/icon/sprites.png);
+    background-position: -167px -116px;
 }
 .facebook {
-    background-image: url(../img/icon/facebook.png);
+    background-image: url(../img/icon/sprites.png);
+    background-position: -17px -114px;
 }
 .facebook:hover {
-    background-image: url(../img/icon/facebookwhite.png);
+    background-image: url(../img/icon/sprites.png);
+    background-position: -66px -116px;
 }
 .vkontakte {
-    background-image: url(../img/icon/vk.png);
+    background-image: url(../img/icon/sprites.png);
+    background-position: -317px -117px;
 }
 .vkontakte:hover {
-    background-image: url(../img/icon/vkwhite.png);
+    background-image: url(../img/icon/sprites.png);
+    background-position: -368px -117px;
 }
 .for-supplier {
     float: left;
@@ -835,7 +900,8 @@ input[type="text"]:focus {
     top: 5px;
     width: 15px;
     height: 15px;
-    background-image: url(../img/icon/heart.png);
+    background-image: url(../img/icon/sprites.png);
+    background-position: -531px -82px;
     background-repeat: no-repeat;
 }
 .for-supplier-right {
@@ -868,9 +934,9 @@ input[type="text"]:focus {
 .catalog-crate {
     padding-left: 43px;
     padding-right: 10px;
-    background-image: url(../img/icon/crateFull.png);
+    background-image: url(../img/icon/sprites.png);
     background-repeat: no-repeat;
-    background-position: 15px 5px;
+    background-position: -115px 3px;
 }
 .catalog-crate:hover {
     background-color: white;
@@ -904,13 +970,15 @@ input[type="text"]:focus {
 .crate-popup .table-image1 {
     width: 33px;
     height: 33px;
-    background-image: url(../img/icon/crate-product1.png);
+    background-image: url(../img/icon/sprites.png);
+    background-position: -415px -65px;
     background-repeat: no-repeat;
 }
 .crate-popup .table-image2 {
     width: 33px;
     height: 33px;
-    background-image: url(../img/icon/crate-product2.png);
+    background-image: url(../img/icon/sprites.png);
+    background-position: -468px -65px;
     background-repeat: no-repeat;
 }
 .crate-popup td:nth-child(3) {
@@ -930,8 +998,7 @@ crate-popup td {
     width: 100%;
 }
 .crate-popup span {
-    display: inline-block;
-    text-align: right;
+    color: #cccccc;
 }
 .crate-popup .stripe {
     height: 1px;

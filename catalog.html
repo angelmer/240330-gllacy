@@ -30,16 +30,23 @@
                                 <div class="search-icon"></div>
                                 <div class="search-modal">
                                     <div>
-                                        <input type="text" placeholder="Что ищем?">
+                                        <input type="text" name="search" id="search">
+                                        <label for="search">Что ищем?</label>
                                     </div>
                                 </div>
                             </div><!--
                         --><div class="header-top login">
                                 <div>Вход</div>
                                 <div class="login-modal">
-                                    <div>
-                                        <input type="text" placeholder="электронная почта">
-                                        <input type="text" placeholder="пароль">
+                                    <div class="login-modal-item">
+                                        <div>
+                                            <input type="text" name="email" id="email">
+                                            <label for="email">Электронная почта</label>
+                                        </div>
+                                        <div>
+                                            <input type="text" name="password" id="password">
+                                            <label for="password">Пароль</label>
+                                        </div>
                                         <button class="btn" type="submit">Войти</button>
                                         <a href="#">Забыли пароль?</a><br>
                                         <a href="#">Новая регистрация</a>

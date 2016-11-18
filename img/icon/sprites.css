@@ -1,142 +1,142 @@
-.cow, .icecream, .leaf, .thermometer, .crate-product1, .crate-product2, .hit, .pin, .crate, .crateFull, .enter, .enterBlack, .loupe, .loupeBlack, .heart, .facebook, .facebookwhite, .instagram, .instawhite, .twitter, .twitterwhite, .vk, .vkwhite{
+.crate, .crateFull, .enter, .enterBlack, .loupe, .loupeBlack, .cow, .icecream, .leaf, .thermometer, .crate-product1, .crate-product2, .heart, .hit, .facebook, .facebookwhite, .instagram, .instawhite, .twitter, .twitterwhite, .vk, .vkwhite, .pin{
 	background: url(sprites.png) no-repeat;
 }
 
-.cow{
-	background-position: -2px -3px ;
-	width: 48px;
-	height: 49px;
-}
-
-.icecream{
-	background-position: -53px -2px ;
-	width: 49px;
-	height: 49px;
-}
-
-.leaf{
-	background-position: -107px -1px ;
-	width: 49px;
-	height: 49px;
-}
-
-.thermometer{
-	background-position: -160px 0;
-	width: 48px;
-	height: 49px;
-}
-
-.crate-product1{
-	background-position: -214px -1px ;
-	width: 33px;
-	height: 33px;
-}
-
-.crate-product2{
-	background-position: -254px 0;
-	width: 33px;
-	height: 33px;
-}
-
-.hit{
-	background-position: -300px 0;
-	width: 61px;
-	height: 61px;
-}
-
-.pin{
-	background-position: -378px -2px ;
-	width: 218px;
-	height: 142px;
-}
-
 .crate{
-	background-position: -13px -72px ;
+	background-position: -2px -3px ;
 	width: 21px;
 	height: 20px;
 }
 
 .crateFull{
-	background-position: -10px -129px ;
+	background-position: -125px -2px ;
 	width: 21px;
 	height: 20px;
 }
 
 .enter{
-	background-position: -70px -72px ;
+	background-position: -277px -1px ;
 	width: 21px;
 	height: 19px;
 }
 
 .enterBlack{
-	background-position: -66px -129px ;
+	background-position: -406px -2px ;
 	width: 21px;
 	height: 19px;
 }
 
 .loupe{
-	background-position: -118px -80px ;
+	background-position: -533px 0;
 	width: 17px;
 	height: 17px;
 }
 
 .loupeBlack{
-	background-position: -118px -131px ;
+	background-position: -599px 0;
 	width: 17px;
 	height: 17px;
 }
 
+.cow{
+	background-position: -1px -49px ;
+	width: 48px;
+	height: 49px;
+}
+
+.icecream{
+	background-position: -100px -50px ;
+	width: 49px;
+	height: 49px;
+}
+
+.leaf{
+	background-position: -201px -51px ;
+	width: 49px;
+	height: 49px;
+}
+
+.thermometer{
+	background-position: -300px -50px ;
+	width: 48px;
+	height: 49px;
+}
+
+.crate-product1{
+	background-position: -415px -65px ;
+	width: 33px;
+	height: 33px;
+}
+
+.crate-product2{
+	background-position: -468px -65px ;
+	width: 33px;
+	height: 33px;
+}
+
 .heart{
-	background-position: -167px -85px ;
+	background-position: -531px -83px ;
 	width: 15px;
 	height: 13px;
 }
 
+.hit{
+	background-position: -578px -50px ;
+	width: 61px;
+	height: 61px;
+}
+
 .facebook{
-	background-position: -201px -66px ;
+	background-position: -17px -114px ;
 	width: 32px;
 	height: 32px;
 }
 
 .facebookwhite{
-	background-position: -250px -66px ;
+	background-position: -66px -116px ;
 	width: 32px;
 	height: 32px;
 }
 
 .instagram{
-	background-position: -167px -117px ;
+	background-position: -116px -117px ;
 	width: 32px;
 	height: 32px;
 }
 
 .instawhite{
-	background-position: -204px -116px ;
+	background-position: -167px -116px ;
 	width: 32px;
 	height: 32px;
 }
 
 .twitter{
-	background-position: -250px -116px ;
+	background-position: -216px -117px ;
 	width: 33px;
 	height: 32px;
 }
 
 .twitterwhite{
-	background-position: -300px -116px ;
+	background-position: -267px -119px ;
 	width: 33px;
 	height: 32px;
 }
 
 .vk{
-	background-position: -169px -167px ;
+	background-position: -317px -117px ;
 	width: 32px;
 	height: 32px;
 }
 
 .vkwhite{
-	background-position: -213px -166px ;
+	background-position: -368px -117px ;
 	width: 32px;
 	height: 32px;
+}
+
+.pin{
+	background-position: -415px -120px ;
+	width: 218px;
+	height: 142px;
 }
 
