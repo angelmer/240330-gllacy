@@ -109,6 +109,19 @@ input[type="text"]:focus {
     font-size: 16px;
     line-height: 18px;
 }
+.underline {
+    position: relative;
+    background-color: none;
+}
+.underline::after {
+    content: "";
+    position: absolute;
+    right: 15px;
+    bottom: -2px;
+    left: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    height: 1px;
+}
 
 .primary-menu-item a {
     padding: 5px;
@@ -129,8 +142,8 @@ input[type="text"]:focus {
 .sub-menu {
     display: none;
     position: absolute;
-    top: 0px;
-    padding-top: 30px;
+    top: 20px;
+    padding-top: 10px;
 }
 .sub-menu ul {
     width: 145px;
@@ -189,7 +202,7 @@ input[type="text"]:focus {
 .search-modal {
     display: none;
     position: absolute;
-    top: 10px;
+    top: 20px;
     padding-top: 30px;
     left: -350px;
 }
@@ -206,14 +219,22 @@ input[type="text"]:focus {
     border-radius: 3px;
 }
 .search-modal label {
+    visibility: hidden;
     position: absolute;
-    color: #cccccc;
-    left: 25px;
-    top: 60px;
+    font-size: 11px;
+    line-height: 13px;
+    left: 20px;
+    top: 35px;
+    color: #8fbdec;
 }
 .search-modal input:focus~label {
-    top: 30px;
-    left: 20px;
+    visibility: visible;
+}
+.search-modal input:focus::-moz-placeholder {
+    color: white;
+}
+.search-modal input:focus::-webkit-input-placeholder {
+    color: white;
 }
 .search-icon {
     width: 33px;
@@ -281,14 +302,22 @@ input[type="text"]:focus {
     position: relative;
 }
 .login-modal label {
+    visibility: hidden;
     position: absolute;
-    color: #cccccc;
-    left: 10px;
-    top: 25px;
+    font-size: 11px;
+    line-height: 13px;
+    left: 5px;
+    top: 5px;
+    color: #8fbdec;
 }
 .login-modal input:focus~label {
-    top: 5px;
-    left: 5px;
+    visibility: visible;
+}
+.login-modal input:focus::-moz-placeholder {
+    color: white;
+}
+.login-modal input:focus::-webkit-input-placeholder {
+    color: white;
 }
 .login-modal a {
     padding-left: 20px;
@@ -439,8 +468,9 @@ input[type="text"]:focus {
     width: 22.2%;
     float: left;
     margin-left: 3.3%;
-    margin-bottom: 2.8%;
+    margin-bottom: 4.2%;
     box-sizing: border-box;
+    text-align: center;
 }
 .product:hover .product-hover {
     display: block;
@@ -459,7 +489,7 @@ input[type="text"]:focus {
 .speed-vision-btn {
     display: inline-block;
     margin-top: 360px;
-    margin-left: 65px;
+    text-align:inherit;
 }
 .product:first-child {
     margin-left: 0;
@@ -467,20 +497,27 @@ input[type="text"]:focus {
 .product:nth-child(4n+5) {
     margin-left: 0;
 }
+.product:nth-child(4n+4) {
+    margin-right: 0;
+}
 .product::before {
     content: "";
     position: absolute;
+    left: 0;
     width: 61px;
     height: 61px;
     background-image: url(../img/icon/sprites.png);
     background-position: -578px -50px;
 }
-.product p {
-    width: 250px;
+
+.product a:nth-child(4) {
+    display: inline;
+    margin-top: 10px;
     font-size: 16px;
     line-height: 22px;
     text-align: center;
-    vertical-align: top;
+    vertical-align: bottom;
+    border-bottom: 1px solid rgba(255 ,255, 255, 0.2);
 }
 .product-price {
     font-size: 45px;
@@ -620,8 +657,11 @@ input[type="text"]:focus {
     border: 1px solid #c7c6c5;
 }
 .subscribe input:focus~label {
-    top: 110px;
+    top: 120px;
     left: 25px;
+    font-size: 11px;
+    line-height: 13px;
+    color: #8fbdec;
 }
 .subscribe button {
     margin-left: 10px;
@@ -662,21 +702,35 @@ input[type="text"]:focus {
     height: 150px;
 }
 .feedback label {
+    visibility: hidden;
     position: absolute;
-    left: 10px;
-    top: 10px;
-    color: #cccccc;
+    left: 0px;
+    top: -15px;
+    font-size: 11px;
+    line-height: 13px;
+    color: #8fbdec;
 }
 .feedback-input {
     position: relative;
 }
 .feedback-input input:focus~label {
-    top: -20px;
-    left: 0px;
+   visibility: visible;
+    
 }
 .feedback-input textarea:focus~label {
-    top: -20px;
-    left: 0px;
+    visibility: visible;
+}
+.feedback-input input:focus::-moz-placeholder {
+    color: white;
+}
+.feedback-input input:focus::-webkit-input-placeholder {
+    color: white;
+}
+.feedback-input textarea:focus::-moz-placeholder {
+    color: white;
+}
+.feedback-input textarea:focus::-webkit-input-placeholder {
+    color: white;
 }
 .feedback-open {
     margin-top: 20px;
@@ -778,6 +832,8 @@ input[type="text"]:focus {
 }
 .where-seek-us {
     position: relative;
+    background-image: url(../img/map.jpg);
+    background-repeat: no-repeat;
 }
 .contacts {
     position: absolute;
@@ -1213,9 +1269,13 @@ crate-popup td {
     height: 25px;
     border-radius: 50%;
     vertical-align: top;
+    text-align: center;
+}
+.catalog-list li:hover:nth-child(n+2):nth-child(-n+6) {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
 }
 .catalog-list a:hover {
-    background-color: rgba(255, 255, 255, 0.5);
     color: black;
 }
 .catalog-list li:first-child::before{

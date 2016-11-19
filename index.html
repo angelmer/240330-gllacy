@@ -5,7 +5,7 @@
 		<title>Glassy Shop</title>
         <link href="https://fonts.googleapis.com/css?family=Roboto:500,700,900&amp;subset=cyrillic" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="css/normalize.css">
-		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/min-style.css">
 	</head>
 	<body>
         <input type="radio" id="btn-1" name="toggle" checked>
@@ -17,7 +17,7 @@
                         <img class="primary-logo" src="img/logo.svg" width="155" height="65" alt="Glassy Shop">
                         <nav class="primary-menu">
                             <ul class="primary-menu-block">
-                                <li class="primary-menu-item active">
+                                <li class="primary-menu-item underline">
                                     <a href="catalog.html">Каталог</a>
                                     <div class="sub-menu">
                                         <ul>
@@ -29,10 +29,10 @@
                                         </ul>
                                     </div>
                                 </li>
-                                <li class="primary-menu-item active">
+                                <li class="primary-menu-item underline">
                                     <a href="#">Доставка и оплата</a>
                                 </li>
-                                <li class="primary-menu-item active">
+                                <li class="primary-menu-item underline">
                                     <a href="#">О компании</a>
                                 </li>
                             </ul>
@@ -42,7 +42,7 @@
                                 <div class="search-icon"></div>
                                 <div class="search-modal">
                                     <div>
-                                        <input type="text" name="search" id="search">
+                                        <input type="text" name="search" id="search" placeholder="Что ищем?">
                                         <label for="search">Что ищем?</label>
                                     </div>
                                 </div>
@@ -52,11 +52,11 @@
                                 <div class="login-modal">
                                     <div class="login-modal-item">
                                         <div>
-                                            <input type="text" name="email" id="email">
+                                            <input type="text" name="email" id="email" placeholder="Электронная почта">
                                             <label for="email">Электронная почта</label>
                                         </div>
                                         <div>
-                                            <input type="text" name="password" id="password">
+                                            <input type="text" name="password" id="password" placeholder="Пароль">
                                             <label for="password">Пароль</label>
                                         </div>
                                         <button class="btn" type="submit">Войти</button>
@@ -110,46 +110,40 @@
                                 <a class="btn speed-vision-btn" href="#">Быстрый просмотр</a>
                             </div>
                             <div class="product-image">
-                                <a href="#"><img src="img/content/orange.png" width="267" height="267" alt="Сливочное с апельсиновым джемом"></a>
+                                <img src="img/content/orange.png" width="267" height="267" alt="Сливочное с апельсиновым джемом">
                             </div>
-                                <div class="product-price">310&#160;&#160;/кг</div>
-                                <p>Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
+                            <div class="product-price">310&#160;&#160;/кг</div>
+                            <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
                         </div>
                         <div class="product">
                             <div class="product-hover">
                                 <a class="btn speed-vision-btn" href="#">Быстрый просмотр</a>
                             </div>
                             <div class="product-image">
-                                <a href="#">
-                                    <img src="img/content/coffee.png" width="267" height="267" alt="Сливочно-кофейное">
-                                </a>
+                                <img src="img/content/coffee.png" width="267" height="267" alt="Сливочно-кофейное">
                             </div>
                             <div class="product-price">380&#160;&#160;/кг</div>
-                            <p>Сливочно-кофейное с кусочками шоколада</p>
+                            <a href="#">Сливочно-кофейное с кусочками шоколада</a>
                         </div>
                         <div class="product">
                             <div class="product-hover">
                                 <a class="btn speed-vision-btn" href="#">Быстрый просмотр</a>
                             </div>
                             <div class="product-image">
-                                <a href="#">
-                                    <img src="img/content/strawberry.png" width="267" height="267" alt="Сливочно-клубничное">
-                                </a>
+                                <img src="img/content/strawberry.png" width="267" height="267" alt="Сливочно-клубничное">
                             </div>
                             <div class="product-price">355&#160;&#160;/кг</div>
-                            <p>Сливочно-клубничное с присыпкой из белого шоколада</p>
+                            <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
                         </div>
                         <div class="product">
                             <div class="product-hover">
                                 <a class="btn speed-vision-btn" href="#">Быстрый просмотр</a>
                             </div>
                             <div class="product-image">
-                                <a href="#">
-                                    <img src="img/content/creme-brulee.png" width="267" height="267" alt="Сливочное с крем-брюле">
-                                </a>
+                                <img src="img/content/creme-brulee.png" width="267" height="267" alt="Сливочное с крем-брюле">
                             </div>
                             <div class="product-price">415&#160;&#160;/кг</div>
-                            <p>Сливочное крем-брюле с карамельной подливкой</p>
+                            <a href="#">Сливочное крем-брюле с карамельной подливкой</a>
                         </div>
                     </section>
                     <article class="product-description clearfix">
@@ -180,7 +174,7 @@
                 </main>
             </div>
 		<footer class="clearfix">
-            <div class="where-seek-us map">
+            <div class="where-seek-us">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424124086!2d30.320894616192646!3d59.93879686904775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1479062803043" width="100%" height="430" frameborder="0" style="border:0" allowfullscreen></iframe>
                 <div class="map-marker"></div>
                 <section class="contacts">
@@ -228,20 +222,20 @@
                     <p>Мы обязательно вам ответим!</p>
                     <button class="feedback-close"></button>
                     <div class="feedback-input">
-                        <input type="text" name="name" id="how-name">
+                        <input class="feedback-name" type="text" name="name" id="how-name" placeholder="Как вас зовут?">
                         <label for="how-name">Как вас зовут?</label>
                     </div>
                     <div class="feedback-input">
-                        <input type="text" name="email" id="your-post">
+                        <input class="feedback-email" type="text" name="email" id="your-post" placeholder="Ваша почта для ответа?">
                         <label for="your-post">Ваша почта для ответа?</label>
                     </div>
                     <div class="feedback-input">
-                        <textarea name="feedback-text" id="write-smth" rows="7" cols="50"></textarea>
+                        <textarea name="feedback-text" id="write-smth" rows="7" cols="50" placeholder="Напишите что нибудь..."></textarea>
                         <label for="write-smth">Напишите что нибудь...</label>
                     </div>
                     <button class="feedback-open btn" type="submit">Отправить</button> 
                 </form>
             </div>
-        <script src="js/script.js"></script>
+        <script src="js/min-script.js"></script>
 	</body>
 </html>
