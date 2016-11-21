@@ -12,7 +12,7 @@ body> input[type="radio"] {
     display: none;
 }
 h2 {
-    font-weight: 600;
+    font-weight: bold;
     font-size: 35px;
     line-height: 41px;
 }
@@ -49,12 +49,13 @@ input[type="text"]:focus {
     border: 1px solid #8fbdec;
 }
 .site-wrapper {
-    width: 1200px;
+    min-width: 900px;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
     background-repeat: no-repeat;
-    background-position: 50% 4.8%;
     transition: background-image 0.5s ease, background-color 0.5s ease;
+    box-sizing: border-box;
 }
 .site-wrapper::before,
 .site-wrapper::after {
@@ -69,9 +70,9 @@ input[type="text"]:focus {
 }
 .content-wrapper {
     width: 100%;
+    min-width: 900px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding-left: 2.2%;
-    padding-right: 2.2%;
     box-sizing: border-box;
 }
 .clearfix::after {
@@ -94,13 +95,22 @@ input[type="text"]:focus {
     box-shadow: inset 0 1px 2px 1px black;
 }
 /* header */
+.main-header {
+    margin-left: 2.3%;
+    margin-right: 2.3%;
+}
+.logo-container {
+    position: relative;
+}
 .primary-logo {
-    float: left;
-    margin-top: 10px;
+    position: absolute;
+    top: 10px;
+    left: -5px;
 }
 .primary-menu-block {
     float: left;
     margin-top: 30px;
+    margin-left: 162px;
     font-size: 0;
 }
 
@@ -125,9 +135,9 @@ input[type="text"]:focus {
 
 .primary-menu-item a {
     padding: 5px;
-    padding-left: 15px;
-    padding-right: 15px;
-    border-radius: 20px;
+    padding-left: 14px;
+    padding-right: 14px;
+    border-radius: 15px;
 }
 .primary-menu-item a:hover {
     color: black;
@@ -176,7 +186,8 @@ input[type="text"]:focus {
 }
 .header-right-top {
     float: right;
-    margin-top: 24px;
+    margin-top: 23px;
+    
     
 }
 .header-top {
@@ -192,8 +203,8 @@ input[type="text"]:focus {
 }
 .search {
     position: relative;
-    width: 32px;
-    min-height: 32px;
+    width: 33px;
+    height: 33px;
     border-radius: 50%;
 }
 .search:hover .search-modal {
@@ -241,7 +252,7 @@ input[type="text"]:focus {
     height: 33px;
     background-image: url(../img/icon/sprites.png);
     background-repeat: no-repeat;
-    background-position: -528px 5px;
+    background-position: -526px 7px;
 }
 .search-icon:hover {
     width: 33px;
@@ -254,11 +265,11 @@ input[type="text"]:focus {
 }
 .login {
     position: relative;
-    padding-top: 5px;
-    padding-bottom: 10px;
-    padding-left: 45px;
-    padding-right: 15px;
-    border-radius: 33px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 44px;
+    padding-right: 16px;
+    border-radius: 15px;
     background-image: url(../img/icon/sprites.png);
     background-repeat: no-repeat;
     background-position: -262px 5px;
@@ -332,24 +343,29 @@ input[type="text"]:focus {
 }
 .crate {
     position: relative;
-    padding-top: 5px;
-    padding-bottom: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
     padding-left: 43px;
-    padding-right: 35px;
-    border-radius: 30px;
+    padding-right: 34px;
+    border-radius: 15px;
     background-image: url(../img/icon/sprites.png);
     background-repeat: no-repeat;
-    background-position: 13px 2px;
+    background-position: 14px 3px;
 }
 
 /* main */
+.main-wrapper {
+    margin-left: 2.3%;
+    margin-right: 2.3%;
+}
 .main-right-top {
     float: right;
+    font-weight: bold;
 }
 .main-right-top p {
     padding: 0;
-    margin: 0;
-    margin-bottom: 5px;
+    margin-top: 17px;
+    margin-bottom: 4px;
     line-height:16px;
     font-size: 14px;
     text-align: right;
@@ -360,8 +376,8 @@ input[type="text"]:focus {
 }
 .slider {
     position: relative;
-    padding-top: 270px;
-    margin-bottom: 50px;
+    padding-top: 273px;
+    margin-bottom: 52px;
     text-align: center;
     color: #ffffff;
     clear: right;
@@ -370,18 +386,20 @@ input[type="text"]:focus {
     display: none; 
 }
 .slider-title {
-    width: 700px;
-    margin: 0 auto;
-    margin-bottom: 45px;
+    width: 673px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
     font-weight: 800;
     font-size: 60px;
-    line-height: 60px;
+    line-height: 60.35px;
 }
 .slider-btn {
-    padding: 12px 45px;
+    padding: 11px 40px;
     font-weight: 600;
-    font-size: 31px;
-    line-height: 41px;
+    font-size: 32px;
+    line-height: 44px;
+    border-radius: 32px;
     vertical-align: top;
     text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
 }
@@ -416,21 +434,26 @@ input[type="text"]:focus {
 }
 #btn-1:checked ~ .site-wrapper {
     background-color: #849d8f;
-    background-image: url(../img/slide1.png);
+    background-image: url(../img/light-background.png);
+    
 }
 #btn-2:checked ~ .site-wrapper {
     background-color: #8996a6;
     background-image: url(../img/slide2.png);
+    
 }
 #btn-3:checked ~ .site-wrapper {
     background-color: #9d8b84;
     background-image: url(../img/slide3.png);
+   
 }
 .two-colon {
     float: left;
-    width: 48.8%;
+    width: 48.85%;
     min-height: 230px;
     margin-bottom: 39px;
+    padding: 20px;
+    padding-top: 0;
     border-radius: 15px;
     box-sizing: border-box;
 }
@@ -438,12 +461,12 @@ input[type="text"]:focus {
     clear: both;
     margin: 0;
     padding: 0;
-    margin-left: 20px;
-    margin-top: 16px;
+    margin-top: 15px;
 }
 .two-colon p {
     font-size: 18px;
     line-height: 22px;
+    font-weight: bold;
 }
 .raspbery {
     background-image: url(../img/raspberry.png);
@@ -456,21 +479,29 @@ input[type="text"]:focus {
 }
 .gratis-btn {
     float: right;
-    margin-top: 43px;
-    margin-right: 22px;
+    margin-top: 44px;
+    padding: 10px;
     padding-left: 22px;
-    padding-right: 22px;
+    padding-right: 23px;
     font-size: 18px;
+    line-height: 24px;
     font-weight: bold;
+}
+.products {
+    width: 100%;
+    box-sizing: border-box;
 }
 .product {
     position: relative;
     width: 22.2%;
     float: left;
-    margin-left: 3.3%;
-    margin-bottom: 4.2%;
+    margin-left: 2.2%;
+    margin-bottom: 42px;
     box-sizing: border-box;
     text-align: center;
+}
+.product img {
+    margin-bottom: 5px;
 }
 .product:hover .product-hover {
     display: block;
@@ -478,29 +509,35 @@ input[type="text"]:focus {
 .product-hover {
     display: none;
     position: absolute;
-    left: -20px;
-    top: -20px;
-    width: 310px;
-    height: 420px;
+    left: -13px;
+    top: -5px;
+    width: 110%;
+    height: 405px;
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.3);
     z-index: 10;
 }
 .speed-vision-btn {
     display: inline-block;
-    margin-top: 360px;
+    margin-top: 341px;
+    padding-left: 17px;
+    padding-right: 17px;
+    font-size: 18px;
+    line-height: 24px;
+    border-radius: 20px;
+    font-weight: bold;
     text-align:inherit;
 }
 .product:first-child {
-    margin-left: 0;
+    margin-left: 2.3%;
 }
 .product:nth-child(4n+5) {
-    margin-left: 0;
+    margin-left: 2.3%;
 }
 .product:nth-child(4n+4) {
     margin-right: 0;
 }
-.product::before {
+.main-content .product::before {
     content: "";
     position: absolute;
     left: 0;
@@ -526,11 +563,16 @@ input[type="text"]:focus {
     position: absolute;
     top: 210px;
 }
+.product-price span {
+    font-size: 30px;
+    line-height: 45px;
+    margin-left: 35px;
+}
 .product-price::before {
     content: "";
     position: absolute;
-    top: 5px;
-    left: 75px;
+    top: 3px;
+    left: 79px;
     width: 30px;
     height: 37px;
     background-image: url(../img/icon/rur.svg);
@@ -538,9 +580,8 @@ input[type="text"]:focus {
 .product-description {
     width: 100%;
     margin-bottom: 40px;
-    padding: 20px;
-    padding-top: 1px;
-    padding-right: 0px;
+    padding-top: 22px;
+    padding-bottom: 5px;
     border-radius: 15px;
     background-image: url(../img/wafer.jpg);
     box-sizing: border-box;
@@ -550,18 +591,36 @@ input[type="text"]:focus {
     width: 50%;
 }
 .product-description h3 {
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 30px;
+    margin: 0;
     margin-bottom: 22px;
+    padding-left: 20px;
+    font-size: 24px;
+    font-weight: medium;
+    line-height: 30px;
+    
 }
-.product-description p {
+.product-description-left p {
     position: relative;
     margin: 0;
-    margin-left: 55px;
-    margin-right: 5px;
+    margin-left: 74px;
     margin-top: 0px;
-    margin-bottom: 12px;
+    margin-bottom: 22px;
+    color: black;
+}
+.product-description-right {
+    padding-right: 17px;
+    box-sizing: border-box;
+}
+.product-description-left {
+    padding-right: 15px;
+    box-sizing: border-box;    
+}
+.product-description-right p {
+    position: relative;
+    margin: 0;
+    margin-left: 70px;
+    margin-top: 0px;
+    margin-bottom: 21px;
     color: black;
 }
 .product-icon {
@@ -597,23 +656,26 @@ input[type="text"]:focus {
     color: black;
 }
 .subscribe {
+    padding: 0;
 }
 .subscribe-cover {
     display: inline-block;
-    width: 98.2%;
+    width: 98.5%;
     min-height: 210px;
-    margin-left: 0.9%;
-    margin-top: 0.9%;
+    margin-left: 0.8%;
+    margin-top: 1%;
+    padding-left: 22px;
+    padding-right: 15px;
     border-radius: 15px;
     background-color: rgba(248, 247, 244, 1);
+    box-sizing: border-box;
 }
 .blog a {
     display: inline-block;
     width: 300px;
-    margin-left: 20px;
     font-size: 24px;
-    font-weight: bold;
     line-height: 30px;
+    font-weight: bold;
     color: black;
     text-decoration: underline;
 }
@@ -624,7 +686,9 @@ input[type="text"]:focus {
     color: rgba(232, 77, 55, 1);
 }
 .blog p {
-    margin-top: 25px;
+    font-size: 16px;
+    line-height: 22px;
+    margin-top: 22px;
     margin-bottom: 5px;
 }
 .subscribe {
@@ -634,14 +698,15 @@ input[type="text"]:focus {
     background-repeat: no-repeat;
 }
 .subscribe p {
-    margin-top: 30px;
-    margin-bottom: 35px;
+    margin-top: 27px;
+    margin-bottom: 37px;
+    font-size: 16px;
+    line-height: 22px;
     color: black;
 }
 .subscribe input {
     width: 365px;
     min-height: 40px;
-    margin-left: 20px;
     border-radius: 5px;
 }
 .subscribe label {
@@ -664,9 +729,12 @@ input[type="text"]:focus {
     color: #8fbdec;
 }
 .subscribe button {
-    margin-left: 10px;
-    padding-right: 20px;
-    padding-left: 20px;
+    margin-left: 8px;
+    padding-right: 15px;
+    padding-left: 15px;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: bold;
     border: none;
     font-weight: bold;
 }
@@ -819,13 +887,6 @@ input[type="text"]:focus {
     animation-name: error;
     animation-duration: 0.6s;
 }
-/*.map {
-    position: relative;
-    height: 430px;
-    padding-top: 63px;
-    background-image: url(../img/map.jpg);
-    background-repeat: no-repeat;
-}*/
 .where-seek-us iframe {
     position: relative;
     z-index: 5;
@@ -837,30 +898,42 @@ input[type="text"]:focus {
 }
 .contacts {
     position: absolute;
-    z-index: 8;
-    top: 60px;
+    z-index: 5;
+    top: 62px;
     right: 0px;
     width: 302px;
     margin-right: 27px;
     margin-bottom: 60px;
-    padding-top: 10px;
+    padding-top: 30px;
     border-radius: 15px;
     color: black;
     background-color: #ffffff;
 }
 .contacts p {
-    margin-top: 19px;
+    margin: 0;
     margin-left: 25px;
     font-size: 14px;
     line-height: 20px;
 }
-.contacts b {
+.contact-adress {
+    display: block;
     font-size: 18px;
     line-height: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.contact-phone {
+    display: block;
+    margin-top: 2px;
+    margin-left: 25px;
+    margin-bottom: 2px;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: bold;
 }
 .contacts a {
     display: inline-block;
-    margin-top: 30px;
+    margin-top: 25px;
     margin-left: 25px;
     margin-bottom: 30px;
     padding: 11px;
@@ -882,11 +955,12 @@ input[type="text"]:focus {
     background-repeat: no-repeat;
 }
 .footer-bottom {
+    padding-left: 2.3%;
+    padding-right: 2.3%;
     clear: both;
 }
 .social {
     float: left;
-    margin-left: 30px;
     margin-top: 30px;
 }
 .social a {
@@ -898,7 +972,7 @@ input[type="text"]:focus {
     width: 30px;
     height: 30px;
     margin-right: 9px;
-    border: 3px solid #c2cec7;
+    border: 4px solid #c2cec7;
     border-radius: 50%;
     background-color: #849d8f;
     background-repeat: no-repeat;
@@ -942,7 +1016,7 @@ input[type="text"]:focus {
     float: left;
     font-size: 13px;
     margin-top: 25px;
-    margin-left: 230px;
+    margin-left: 19.8%;
 }
 .for-supplier-left {
     position: relative;
@@ -969,13 +1043,12 @@ input[type="text"]:focus {
 }
 .copyright a {
     display: inline-block;
-    margin-top: 10px;
-    margin-left: 20px;
+    margin-top: 13px;
+    margin-left: 5px;
     margin-bottom: 0;
 }
 .copyright p {
     margin-top: 0;
-    padding-right: 25px;
 }
 /*catalog*/
 .catalog-top {
@@ -986,13 +1059,14 @@ input[type="text"]:focus {
 }
 .primary-menu-item .catalog-btn:hover {
     background-color: rgba(239, 100, 65, 1);
+    color: #ffffff;
 }
 .catalog-crate {
     padding-left: 43px;
-    padding-right: 10px;
+    padding-right: 15px;
     background-image: url(../img/icon/sprites.png);
     background-repeat: no-repeat;
-    background-position: -115px 3px;
+    background-position: -112px 4px;
 }
 .catalog-crate:hover {
     background-color: white;
@@ -1013,9 +1087,10 @@ input[type="text"]:focus {
 .crate-popup {
     width: 540px;
     padding: 10px;
+    padding-top: 15px;
     border-radius: 10px;
-    font-size: 16px;
-    line-height: 18px;
+    font-size: 13px;
+    line-height: 16px;
     background-color: #f8f7f4;
     color: black;
     box-sizing: border-box;
@@ -1066,6 +1141,7 @@ crate-popup td {
     font-size: 18px;
     line-height: 24px;
     font-weight: bold;
+    cursor: pointer;
 }
 .crate-popup-right {
     float: right;
@@ -1076,28 +1152,76 @@ crate-popup td {
     font-size: 15px;
     font-weight: bold;
 }
+.catalog-wrapper {
+    margin-left: 2.3%;
+    margin-right: 2.3%;
+}
 .catalog-title {
     margin-top: 0;
-    margin-bottom: 20px;
+    margin-bottom: 23px;
 }
 .breadcrumbs {
     float: left;
-    margin-top: 20px;
+    margin-top: 42px;
+    font-size: 14px;
+    line-height: 16px;
+}
+.breadcrumbs a {
+    padding-right: 5px;
 }
 .catalog-select {
     position: relative;
     display: inline-block;
     vertical-align: top;
 }
+.popularity:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+.filter-sort-type {
+    padding: 7px 30px 7px 13px;
+    margin-top: 25px;
+    margin-right: 10px;
+    background: rgba(255, 255, 255, 0.2) url("../img/marker.png") no-repeat scroll right 15px top 50%;
+    border: medium none;
+    border-radius: 40px;
+    color: inherit;
+    cursor: pointer;
+    -moz-appearance: none;
+}
+.filter-sort-type option {
+    background-color: #ffffff;
+    color: #000000;
+}
+.filter-sort-type:hover {
+    background-color: #ffffff;
+}
+.sort {
+    display: inline-block;
+    position: relative;
+}
+.sort-triangle {
+    position: absolute;
+    right: 25px;
+    top: 42px;
+    width: 0px;
+	height: 0px;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 5px solid black;
+    z-index: 10;
+}
 .catalog-select p {
-    margin-top: 0;
-    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-left: 15px;
+    margin-bottom: 6px;
     font-size: 14px;
+    line-height: 16px;
 }
 .catalog-select-item {
     position: relative;
     display: inline-block;
-    padding: 5px;
+    padding: 6px;
     border-radius: 20px;
     background-color: rgba(169, 185, 175, 0.5);
 }
@@ -1106,16 +1230,6 @@ crate-popup td {
     padding-left: 15px;
     padding-right: 50px;
     margin-right: 10px;
-}
-.sort-triangle {
-    position: absolute;
-    right: 15px;
-    top: 15px;
-    width: 0;
-	height: 0;
-	border-left: 5px solid transparent;
-	border-right: 5px solid transparent;
-	border-top: 5px solid black;
 }
 .catalog-price {
     padding-right: 25px; 
@@ -1128,6 +1242,7 @@ crate-popup td {
     left: 35px;
     border-radius: 50%;
     background-color: #ffffff;
+    cursor: pointer;
 }
 .catalog-price::after {
     content: "";
@@ -1137,6 +1252,7 @@ crate-popup td {
     right: 65px;
     border-radius: 50%;
     background-color: #ffffff;
+    cursor: pointer;
 }
 .price-line {
     position: absolute;
@@ -1165,9 +1281,22 @@ crate-popup td {
     padding-left: 35px;
     cursor: pointer;
 }
+.catalog-select-item .fatness-label:nth-child(1) {
+    padding-left: 40px;
+}
+.catalog-select-item .fatness-label:nth-child(2) {
+    padding-left: 47px;
+}
+.catalog-select-item .fatness-label:nth-child(3) {
+    padding-left: 47px;
+}
+.catalog-select-item .fatness-label:nth-child(4) {
+    padding-left: 45px;
+    padding-right: 10px;
+}
 .fatness-indicator {
     position: absolute;
-    left: 10px;
+    left: 15px;
     width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -1186,7 +1315,7 @@ crate-popup td {
 .catalog-select-item input[type="checkbox"] +
 .checkbox-indicator {
      position: absolute;
-    left: 10px;
+    left: 7px;
     width: 20px;
     height: 20px;
     border-radius: 3px;
@@ -1195,7 +1324,7 @@ crate-popup td {
 .catalog-select-item input[type="checkbox"]:checked+.checkbox-indicator::before {
     content: "";
     position: absolute;
-    top: 10px;
+    top: 6px;
     left: 5px;
     width: 15px;
     height: 3px;
@@ -1205,7 +1334,7 @@ crate-popup td {
 .catalog-select-item input[type="checkbox"]:checked+.checkbox-indicator::after {
     content: "";
     position: absolute;
-    top: 12px;
+    top: 9px;
     left: 1px;
     width: 10px;
     height: 3px;
@@ -1232,15 +1361,15 @@ crate-popup td {
     padding-left: 50px;
 }
 .catalog-fill {
-    margin-top: 13px;
-    margin-bottom: 37px;
+    margin-top: 8px;
+    margin-bottom: 42px;
 }
 .catalog-fill label {
-    padding-right: 15px;
+    padding-right: 17px;
 }
 .catalog-fill button {
     border: 1px solid white;
-    margin-left: 15px;
+    margin-left: 7px;
     padding: 7px;
     padding-left: 30px;
     padding-right: 30px;
@@ -1258,15 +1387,16 @@ crate-popup td {
 }
 .catalog-list {
     float: right;
-    margin-top: 40px;
+    margin-top: 45px;
+    margin-right: 15px;
 }
 .catalog-list li {
     position: relative;
 }
 .catalog-list a {
     display: inline-block;
-    width: 25px;
-    height: 25px;
+    width: 27px;
+    height: 27px;
     border-radius: 50%;
     vertical-align: top;
     text-align: center;
@@ -1318,7 +1448,7 @@ crate-popup td {
 }
 .page-list {
     border-bottom: 1px solid white;
-    padding-bottom: 30px;
+    padding-bottom: 27px;
 }
 .catalog-footer {
     padding-top: 5px;
