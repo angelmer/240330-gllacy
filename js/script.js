@@ -123,3 +123,4 @@ if(form){
 
 if(email)
 	email.addEventListener('blur',function(event){validateInput(event,email)});
+

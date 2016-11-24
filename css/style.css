@@ -1518,6 +1518,10 @@ a.contact-feedback {
 }
 
 .element-show {
+  -webkit-animation-name: rotation;
+          animation-name: rotation;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
   display: block;
 }
 
@@ -1884,3 +1888,5 @@ button.feedback-send {
   -webkit-animation: rotation .6s;
           animation: rotation .6s;
 }
+
+
